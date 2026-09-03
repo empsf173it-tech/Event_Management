@@ -759,3 +759,12 @@ a {
     left: 0;
   }
 }
+
+/* Avatar Image Styles for About Page */
+.avatar-img {
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  box-shadow: var(--shadow-sm);
+}
