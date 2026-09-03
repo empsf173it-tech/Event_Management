@@ -360,6 +360,13 @@ a {
   margin-top: auto;
 }
 
+/* Social icon rows inside team cards — force flex-row and center regardless of parent flex-column */
+.custom-card .d-flex.flex-row {
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
 .custom-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
