@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EventPulse Admin & Organizer Dashboard - Manage analytics, user registrations, ticket orders, and venue messages.">
+  <title>EventPulse | Management Dashboard</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light">
+
+  <div class="dashboard-wrapper">
+    <!-- SIDEBAR NAV -->
+    <aside class="dashboard-sidebar" id="dashSidebar">
+      <div class="p-4 border-bottom border-secondary border-opacity-25">
+        <a href="index.html" class="brand-logo-custom text-white">
+          <i class="bi bi-broadcast"></i> EventPulse
+        </a>
+        <small class="text-white-50 d-block mt-1">Admin Operations Console</small>
+      </div>
+
+      <div class="py-3 flex-grow-1">
+        <a href="#analytics" class="dashboard-nav-item dash-section-trigger active" data-target-section="section-analytics">
+          <i class="bi bi-graph-up-arrow text-danger"></i> Analytics & Overview
+        </a>
+        <a href="#users" class="dashboard-nav-item dash-section-trigger" data-target-section="section-users">
+          <i class="bi bi-people-fill text-indigo"></i> Users Management
+        </a>
+        <a href="#orders" class="dashboard-nav-item dash-section-trigger" data-target-section="section-orders">
+          <i class="bi bi-ticket-detailed-fill text-warning"></i> Orders & Bookings
+        </a>
+        <a href="#messages" class="dashboard-nav-item dash-section-trigger" data-target-section="section-messages">
+          <i class="bi bi-chat-left-dots-fill text-success"></i> Customer Messages
+        </a>
+      </div>
+
+      <div class="p-3 border-top border-secondary border-opacity-25">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img src="assets/img/team-1.jpg" alt="Admin Profile" class="avatar-img" style="width:40px; height:40px;">
+          <div class="overflow-hidden">
+            <h6 class="text-white mb-0 small text-truncate">Sarah Jenkins</h6>
+            <small class="text-white-50 d-block text-truncate">Super Admin</small>
+          </div>
+        </div>
+        <a href="index.html" class="btn btn-outline-light btn-sm w-100"><i class="bi bi-box-arrow-left me-1"></i> Exit Dashboard</a>
+      </div>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <main class="dashboard-content">
+      <!-- TOP DASHBOARD BAR -->
+      <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div>
+          <h2 class="fw-bold mb-1">Event Operations Hub</h2>
+          <p class="text-muted small mb-0">Real-time telemetry, delegate counts, and transaction tracking.</p>
+        </div>
+        <div class="d-flex gap-2">
+          <a href="events.html" class="btn btn-outline-custom btn-sm"><i class="bi bi-eye"></i> View Live Site</a>
+          <button class="btn btn-secondary-custom btn-sm"><i class="bi bi-plus-circle-fill me-1"></i> Create Event</button>
+        </div>
+      </div>
+
+      <!-- SECTION 1: ANALYTICS -->
+      <div id="section-analytics" class="dash-section">
+        <!-- STAT CARDS ROW -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-3">
+            <div class="stat-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-muted small fw-bold">Gross Revenue</span>
+                <span class="badge bg-success">+14.2%</span>
+              </div>
+              <h3 class="fw-bold text-dark mb-1">$842,500</h3>
+              <small class="text-muted">Total ticket sales 2026</small>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-muted small fw-bold">Active Events</span>
+                <span class="badge bg-primary">Live</span>
+              </div>
+              <h3 class="fw-bold text-dark mb-1">18 Summits</h3>
+              <small class="text-muted">6 scheduled this month</small>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-muted small fw-bold">Total Delegates</span>
+                <span class="badge bg-danger">+28%</span>
+              </div>
+              <h3 class="fw-bold text-dark mb-1">42,890</h3>
+              <small class="text-muted">Verified QR check-ins</small>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-muted small fw-bold">Open Inquiries</span>
+                <span class="badge bg-warning text-dark">5 New</span>
+              </div>
+              <h3 class="fw-bold text-dark mb-1">24 Tickets</h3>
+              <small class="text-muted">Avg response &lt; 15 mins</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- ANALYTICS VISUAL BREAKDOWN -->
+        <div class="row g-4 mb-4">
+          <div class="col-lg-8">
+            <div class="bg-white p-4 rounded-4 border shadow-sm h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0">Ticket Sales Velocity (2026 Q3)</h5>
+                <span class="badge bg-light text-dark border">Updated 10m ago</span>
+              </div>
+              <!-- Visual Bar Chart Representation -->
+              <div class="d-flex align-items-end gap-3 pt-4 pb-2 text-center" style="height: 220px;">
+                <div class="flex-fill d-flex flex-column align-items-center">
+                  <div class="bg-primary rounded-top w-100" style="height: 60%;"></div>
+                  <small class="text-muted mt-2">May</small>
+                </div>
+                <div class="flex-fill d-flex flex-column align-items-center">
+                  <div class="bg-primary rounded-top w-100" style="height: 75%;"></div>
+                  <small class="text-muted mt-2">Jun</small>
+                </div>
+                <div class="flex-fill d-flex flex-column align-items-center">
+                  <div class="bg-danger rounded-top w-100" style="height: 90%;"></div>
+                  <small class="text-muted mt-2">Jul</small>
+                </div>
+                <div class="flex-fill d-flex flex-column align-items-center">
+                  <div class="bg-primary rounded-top w-100" style="height: 80%;"></div>
+                  <small class="text-muted mt-2">Aug</small>
+                </div>
+                <div class="flex-fill d-flex flex-column align-items-center">
+                  <div class="bg-danger rounded-top w-100" style="height: 100%;"></div>
+                  <small class="text-muted mt-2">Sep</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="bg-white p-4 rounded-4 border shadow-sm h-100">
+              <h5 class="fw-bold mb-3">Category Revenue Share</h5>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between small fw-bold mb-1">
+                  <span>Tech Summits & AI</span>
+                  <span>45%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-primary" style="width: 45%;"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between small fw-bold mb-1">
+                  <span>Music Festivals</span>
+                  <span>30%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-danger" style="width: 30%;"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between small fw-bold mb-1">
+                  <span>Luxury Weddings & Galas</span>
+                  <span>25%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-warning" style="width: 25%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: USERS -->
+      <div id="section-users" class="dash-section" style="display: none;">
+        <div class="bg-white p-4 rounded-4 border shadow-sm">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold mb-0">Registered Users & Delegates</h5>
+            <button class="btn btn-outline-custom btn-sm"><i class="bi bi-download"></i> Export CSV</button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>User ID</th>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold">#USR-9021</td>
+                  <td>Alex Morgan</td>
+                  <td>alex.morgan@techcorp.com</td>
+                  <td><span class="badge bg-primary">Delegate</span></td>
+                  <td><span class="badge bg-success">Active</span></td>
+                  <td><button class="btn btn-sm btn-outline-custom">Manage</button></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#USR-9022</td>
+                  <td>Jordan Vance</td>
+                  <td>jordan@soundwave.io</td>
+                  <td><span class="badge bg-danger">Organizer</span></td>
+                  <td><span class="badge bg-success">Active</span></td>
+                  <td><button class="btn btn-sm btn-outline-custom">Manage</button></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#USR-9023</td>
+                  <td>Sophia Rostova</td>
+                  <td>sophia@luxweddings.com</td>
+                  <td><span class="badge bg-warning text-dark">VIP Sponsor</span></td>
+                  <td><span class="badge bg-success">Active</span></td>
+                  <td><button class="btn btn-sm btn-outline-custom">Manage</button></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#USR-9024</td>
+                  <td>David Chen</td>
+                  <td>david@futuretech.ai</td>
+                  <td><span class="badge bg-info text-dark">Speaker</span></td>
+                  <td><span class="badge bg-success">Active</span></td>
+                  <td><button class="btn btn-sm btn-outline-custom">Manage</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: ORDERS -->
+      <div id="section-orders" class="dash-section" style="display: none;">
+        <div class="bg-white p-4 rounded-4 border shadow-sm">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold mb-0">Recent Event Ticket Orders</h5>
+            <span class="badge bg-primary">Live Transaction Stream</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Order #</th>
+                  <th>Event Name</th>
+                  <th>Customer</th>
+                  <th>Tier</th>
+                  <th>Amount</th>
+                  <th>Payment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold">#ORD-5541</td>
+                  <td>Global AI Summit 2026</td>
+                  <td>Michael Scott</td>
+                  <td>VIP All-Access</td>
+                  <td class="fw-bold text-success">$299.00</td>
+                  <td><span class="badge bg-success">Paid (Stripe)</span></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#ORD-5542</td>
+                  <td>Neon Horizon Fest</td>
+                  <td>Emily Watson</td>
+                  <td>Standard Pass (x2)</td>
+                  <td class="fw-bold text-success">$298.00</td>
+                  <td><span class="badge bg-success">Paid (Apple Pay)</span></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#ORD-5543</td>
+                  <td>Global Financial Forum</td>
+                  <td>Robert Thorne</td>
+                  <td>Executive Platinum</td>
+                  <td class="fw-bold text-success">$450.00</td>
+                  <td><span class="badge bg-success">Paid (Wire)</span></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#ORD-5544</td>
+                  <td>Royal Couture Gala</td>
+                  <td>Laura Croft</td>
+                  <td>VIP Pass</td>
+                  <td class="fw-bold text-success">$599.00</td>
+                  <td><span class="badge bg-success">Paid (Card)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: MESSAGES -->
+      <div id="section-messages" class="dash-section" style="display: none;">
+        <div class="bg-white p-4 rounded-4 border shadow-sm">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold mb-0">Customer & Venue Inquiries</h5>
+            <span class="badge bg-danger">4 Unread</span>
+          </div>
+
+          <div class="list-group list-group-flush">
+            <div class="list-group-item p-3 border rounded-3 mb-2 bg-light">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-bold mb-0 text-primary">Venue Booking Request - SF Arena</h6>
+                <small class="text-muted">Today 10:14 AM</small>
+              </div>
+              <p class="small text-muted mb-2">"Hi team, we would like to confirm 4K LED rig availability for our Oct concert."</p>
+              <button class="btn btn-secondary-custom btn-sm py-1 px-3">Reply Message</button>
+            </div>
+
+            <div class="list-group-item p-3 border rounded-3 mb-2">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-bold mb-0 text-dark">VIP Delegate Dietary Preference</h6>
+                <small class="text-muted">Yesterday 04:30 PM</small>
+              </div>
+              <p class="small text-muted mb-2">"Requested vegan dining menu for the Financial Forum keynote speakers."</p>
+              <button class="btn btn-outline-custom btn-sm py-1 px-3">Mark Resolved</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

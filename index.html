@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EventPulse - Modern Event Management & Planning Platform for Corporate Summits, Music Festivals, Luxury Weddings, and Galas.">
+  <meta name="keywords" content="Event Management, Conference Planning, Concert Tickets, Luxury Weddings, Award Galas">
+  <title>EventPulse | Professional Event Management & Experiences</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Animate.css for entrance animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <!-- Logo + Icon -->
+        <a class="navbar-brand" href="index.html">
+          <i class="bi bi-broadcast"></i> EventPulse
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links & Buttons (Offcanvas for mobile) -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title font-weight-bold" id="offcanvasNavbarLabel">
+              <i class="bi bi-broadcast text-danger"></i> EventPulse Navigation
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body align-items-center">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Header Action Buttons -->
+            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+              <a href="login.html" class="btn btn-primary-custom">Log In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <img src="assets/img/hero-bg.jpg" alt="EventPulse Futuristic Stage" class="hero-backdrop">
+    <div class="hero-overlay"></div>
+    
+    <div class="container hero-content">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7 animate__animated animate__fadeInLeft">
+          <span class="section-badge badge-secondary mb-3">
+            <i class="bi bi-stars"></i> Next-Gen Event Platform
+          </span>
+          <h1 class="hero-title">
+            Crafting Unforgettable <span>Live Events</span> & Grand Experiences
+          </h1>
+          <p class="hero-subtitle">
+            From high-stakes international tech summits to mesmerizing stadium concerts and luxury galas, EventPulse manages every detail with precision.
+          </p>
+          <div class="d-flex flex-wrap gap-3 pt-2">
+            <a href="events.html" class="btn btn-secondary-custom btn-lg">
+              <i class="bi bi-ticket-perforated-fill"></i> Explore Upcoming Events
+            </a>
+            <a href="services.html" class="btn btn-outline-custom btn-lg text-white border-white">
+              <i class="bi bi-play-circle-fill"></i> Our Services
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="row mt-5 pt-3 border-top border-secondary-subtle opacity-90">
+            <div class="col-4">
+              <div class="h3 fw-bold text-white mb-0">500+</div>
+              <small class="text-secondary-subtle">Summits Delivered</small>
+            </div>
+            <div class="col-4">
+              <div class="h3 fw-bold text-white mb-0">99.8%</div>
+              <small class="text-secondary-subtle">Client Satisfaction</small>
+            </div>
+            <div class="col-4">
+              <div class="h3 fw-bold text-white mb-0">1.2M+</div>
+              <small class="text-secondary-subtle">Tickets Issued</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 animate__animated animate__fadeInRight">
+          <div class="hero-card-preview p-3 bg-dark text-white rounded-4 border border-secondary border-opacity-25 shadow-lg">
+            <div class="position-relative overflow-hidden rounded-3 mb-3">
+              <img src="assets/img/home-cat-2.jpg" alt="Featured Festival Event" class="img-fluid w-100 rounded-3">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-3 px-3 py-2">LIVE NEXT WEEK</span>
+            </div>
+            <div class="p-2">
+              <h4 class="text-white fw-bold">Neon Pulse Horizon Music Fest 2026</h4>
+              <p class="text-secondary-subtle small mb-3">
+                <i class="bi bi-geo-alt-fill text-danger me-1"></i> Grand Arena, San Francisco | Oct 12-14
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary">
+                <span class="fs-5 fw-bold text-warning">$149.00 <small class="fs-6 text-white-50">/ pass</small></span>
+                <a href="events.html" class="btn btn-primary-custom btn-sm">Reserve Seats</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: EVENT CATEGORIES -->
+  <section class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="section-badge">Featured Sectors</span>
+        <h2 class="display-6 fw-bold">Explore World-Class Event Categories</h2>
+        <p class="text-muted">Tailored event production and management across diverse industries and celebrations.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Category 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/home-cat-1.jpg" alt="Corporate Summits">
+              <span class="card-tag">Corporate</span>
+            </div>
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Tech Summits & Expos</h5>
+              <p class="text-muted small">Keynotes, interactive trade booths, executive networking, and live broadcasts.</p>
+              <a href="services.html" class="text-primary fw-bold small">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/home-cat-2.jpg" alt="Music Concerts">
+              <span class="card-tag">Entertainment</span>
+            </div>
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Music Festivals</h5>
+              <p class="text-muted small">Stadium concerts, acoustic sessions, multi-stage audio production, lighting shows.</p>
+              <a href="services.html" class="text-primary fw-bold small">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/home-cat-3.jpg" alt="Luxury Weddings">
+              <span class="card-tag">Social</span>
+            </div>
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Luxury Weddings</h5>
+              <p class="text-muted small">Bespoke floral decor, gourmet catering, sound orchestration, VIP hospitality.</p>
+              <a href="services.html" class="text-primary fw-bold small">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/home-cat-4.jpg" alt="Award Galas">
+              <span class="card-tag">VIP Galas</span>
+            </div>
+            <div class="p-4">
+              <h5 class="fw-bold mb-2">Award Nights & Galas</h5>
+              <p class="text-muted small">Red carpet media walls, fine dining banquets, stage trophy ceremonies.</p>
+              <a href="services.html" class="text-primary fw-bold small">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: UPCOMING FEATURED EVENTS -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+        <div>
+          <span class="section-badge badge-secondary">Upcoming Lineup</span>
+          <h2 class="display-6 fw-bold mb-0">Handpicked Featured Events</h2>
+        </div>
+        <a href="events.html" class="btn btn-outline-custom mt-3 mt-md-0">View All Events (6)</a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Event Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/event-1.jpg" alt="Global AI & Tech Summit">
+              <span class="card-tag">Tech & AI</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-danger fw-bold small">
+                <i class="bi bi-calendar-event"></i> NOV 18-20, 2026
+              </div>
+              <h5 class="fw-bold mb-2">Global AI & Tech Summit 2026</h5>
+              <p class="text-muted small">Join 5,000+ AI researchers, startup founders, and tech executives in silicon valley.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fw-bold fs-5 text-indigo">$299.00</span>
+                <a href="events.html" class="btn btn-primary-custom btn-sm">Get Tickets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/event-2.jpg" alt="Neon Horizon Fest">
+              <span class="card-tag">Music</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-danger fw-bold small">
+                <i class="bi bi-calendar-event"></i> DEC 05-07, 2026
+              </div>
+              <h5 class="fw-bold mb-2">Neon Horizon Electronic Fest</h5>
+              <p class="text-muted small">3 days of international headliner DJs, laser illuminations, and food village.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fw-bold fs-5 text-indigo">$149.00</span>
+                <a href="events.html" class="btn btn-primary-custom btn-sm">Get Tickets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/event-3.jpg" alt="Global Finance Forum">
+              <span class="card-tag">Business</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex align-items-center gap-2 mb-2 text-danger fw-bold small">
+                <i class="bi bi-calendar-event"></i> DEC 15, 2026
+              </div>
+              <h5 class="fw-bold mb-2">Global Financial Leadership Forum</h5>
+              <p class="text-muted small">Wall street analysts and banking pioneers discussing global market trends.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fw-bold fs-5 text-indigo">$450.00</span>
+                <a href="events.html" class="btn btn-primary-custom btn-sm">Get Tickets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: WHY CHOOSE US -->
+  <section class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="section-badge">Why EventPulse</span>
+        <h2 class="display-6 fw-bold">Unrivaled Event Production Quality</h2>
+        <p class="text-muted">We combine cutting-edge technology with meticulous creative execution.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 text-center border rounded-4 bg-light h-100 shadow-sm transition-all hover-top">
+            <div class="counter-icon mx-auto mb-3 bg-primary bg-opacity-10 text-primary fs-2">
+              <i class="bi bi-cpu-fill"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Smart AI Matchmaking</h5>
+            <p class="text-muted small">Instant attendee recommendations and B2B delegate schedule optimization.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 text-center border rounded-4 bg-light h-100 shadow-sm transition-all hover-top">
+            <div class="counter-icon mx-auto mb-3 bg-danger bg-opacity-10 text-danger fs-2">
+              <i class="bi bi-soundwave"></i>
+            </div>
+            <h5 class="fw-bold mb-2">4K Audio & Stage Rigging</h5>
+            <p class="text-muted small">State-of-the-art acoustics, high-density LED arrays, and synchronized lasers.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 text-center border rounded-4 bg-light h-100 shadow-sm transition-all hover-top">
+            <div class="counter-icon mx-auto mb-3 bg-primary bg-opacity-10 text-primary fs-2">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Bank-Grade Ticketing</h5>
+            <p class="text-muted small">Encrypted QR check-ins, anti-scalping verification, and instant NFC passes.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 text-center border rounded-4 bg-light h-100 shadow-sm transition-all hover-top">
+            <div class="counter-icon mx-auto mb-3 bg-danger bg-opacity-10 text-danger fs-2">
+              <i class="bi bi-headset"></i>
+            </div>
+            <h5 class="fw-bold mb-2">24/7 On-Site Concierge</h5>
+            <p class="text-muted small">Dedicated event managers, VIP guest liaisons, and emergency response teams.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: LIVE STAT COUNTERS -->
+  <section class="py-5 bg-dark text-white position-relative">
+    <div class="container py-4 position-relative z-2">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="counter-box bg-dark border-secondary">
+            <div class="counter-icon text-danger mx-auto">
+              <i class="bi bi-calendar2-check-fill"></i>
+            </div>
+            <div class="counter-value text-white" data-target="520" data-suffix="+">0</div>
+            <span class="text-muted fw-bold">Events Delivered</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="counter-box bg-dark border-secondary">
+            <div class="counter-icon text-indigo mx-auto">
+              <i class="bi bi-emoji-smile-fill"></i>
+            </div>
+            <div class="counter-value text-white" data-target="99" data-suffix="%">0</div>
+            <span class="text-muted fw-bold">Client Satisfaction</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="counter-box bg-dark border-secondary">
+            <div class="counter-icon text-danger mx-auto">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="counter-value text-white" data-target="1250" data-suffix="k+">0</div>
+            <span class="text-muted fw-bold">Global Attendees</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="counter-box bg-dark border-secondary">
+            <div class="counter-icon text-indigo mx-auto">
+              <i class="bi bi-globe-americas"></i>
+            </div>
+            <div class="counter-value text-white" data-target="48" data-suffix="">0</div>
+            <span class="text-muted fw-bold">Cities Reached</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CLIENT TESTIMONIALS -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="section-badge badge-secondary">Client Praise</span>
+        <h2 class="display-6 fw-bold">What Leaders Say About EventPulse</h2>
+        <p class="text-muted">Trusted by fortune 500 executives, festival producers, and luxury wedding planners.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card h-100">
+            <i class="bi bi-quote quote-icon"></i>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="assets/img/team-1.jpg" alt="Client Sarah" class="avatar-img">
+              <div>
+                <h6 class="fw-bold mb-0">Sarah Jenkins</h6>
+                <small class="text-muted">VP Communications, NexaTech</small>
+              </div>
+            </div>
+            <p class="text-secondary italic mb-0">
+              "EventPulse organized our 3,000-person tech summit effortlessly. Their stage rigging, live streaming stability, and mobile app were flawless."
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card h-100">
+            <i class="bi bi-quote quote-icon"></i>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="assets/img/team-2.jpg" alt="Client Marcus" class="avatar-img">
+              <div>
+                <h6 class="fw-bold mb-0">Marcus Vance</h6>
+                <small class="text-muted">Producer, SoundWave Live</small>
+              </div>
+            </div>
+            <p class="text-secondary italic mb-0">
+              "The sound clarity, laser synchronization, and security crowd control at our music festival set a new industry benchmark!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card h-100">
+            <i class="bi bi-quote quote-icon"></i>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="assets/img/team-3.jpg" alt="Client Elena" class="avatar-img">
+              <div>
+                <h6 class="fw-bold mb-0">Elena Rostova</h6>
+                <small class="text-muted">Founder, Luxury Weddings International</small>
+              </div>
+            </div>
+            <p class="text-secondary italic mb-0">
+              "Every detail of our royal garden wedding reception was executed like a dream. Their team is creative, calm under pressure, and ultra-professional."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: RECENT NEWS & BLOG INSIGHTS -->
+  <section class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+        <div>
+          <span class="section-badge">Industry Insights</span>
+          <h2 class="display-6 fw-bold mb-0">Event Planning Tips & Trends</h2>
+        </div>
+        <a href="faq.html" class="btn btn-outline-custom mt-3 mt-md-0">Read More Articles</a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/service-4.jpg" alt="Blog Post Tech Stage">
+              <span class="card-tag">Trends</span>
+            </div>
+            <div class="p-4">
+              <small class="text-muted"><i class="bi bi-clock"></i> Sep 02, 2026 | 5 min read</small>
+              <h5 class="fw-bold mt-2 mb-2">10 Key Elements of High-Converting Tech Summits</h5>
+              <p class="text-muted small">How AI matchmaking and immersive 3D stage displays boost delegate engagement by 40%.</p>
+              <a href="services.html" class="fw-bold text-danger small">Read Story <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/service-5.jpg" alt="Blog Post Galas">
+              <span class="card-tag">Guide</span>
+            </div>
+            <div class="p-4">
+              <small class="text-muted"><i class="bi bi-clock"></i> Aug 28, 2026 | 4 min read</small>
+              <h5 class="fw-bold mt-2 mb-2">Designing VIP Red Carpet Galas That Wow Donors</h5>
+              <p class="text-muted small">A step-by-step checklist for seating arrangements, sound systems, and auction management.</p>
+              <a href="services.html" class="fw-bold text-danger small">Read Story <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/service-8.jpg" alt="Blog Post Culinary">
+              <span class="card-tag">Catering</span>
+            </div>
+            <div class="p-4">
+              <small class="text-muted"><i class="bi bi-clock"></i> Aug 15, 2026 | 6 min read</small>
+              <h5 class="fw-bold mt-2 mb-2">Sustainable & Fine Dining Trends for 2026</h5>
+              <p class="text-muted small">Zero-waste culinary experiences and interactive live cooking stations for exclusive guests.</p>
+              <a href="services.html" class="fw-bold text-danger small">Read Story <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="py-5 bg-gradient-combo text-white text-center position-relative">
+    <div class="container py-5">
+      <h2 class="display-5 fw-bold mb-3 text-white">Ready to Plan Your Next Masterpiece Event?</h2>
+      <p class="lead mb-4 max-w-600 mx-auto opacity-90">
+        Let our veteran producers and event tech team elevate your vision into an unforgettable reality.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="contact.html" class="btn btn-dark-custom btn-lg">
+          <i class="bi bi-telephone-outbound-fill"></i> Get Free Consultation
+        </a>
+        <a href="events.html" class="btn btn-outline-custom text-white border-white btn-lg">
+          <i class="bi bi-ticket-detailed"></i> Browse Event Tickets
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <!-- Col 1: Brand -->
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html">
+            <i class="bi bi-broadcast"></i> EventPulse
+          </a>
+          <p class="small text-muted mb-4">
+            EventPulse is the premier end-to-end event management platform, crafting iconic summits, concerts, galas, and corporate celebrations worldwide.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Company Links -->
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-heading">Company</h6>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Upcoming Events</a></li>
+            <li><a href="gallery.html">Portfolio Gallery</a></li>
+            <li><a href="contact.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support Links -->
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-heading">Support</h6>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="dashboard.html">Admin Dashboard</a></li>
+            <li><a href="login.html">Member Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter Form -->
+        <div class="col-lg-4">
+          <h6 class="footer-heading">Subscribe to Event Digest</h6>
+          <p class="small text-muted mb-3">Get VIP early-bird access to summit tickets and exclusive event management insights.</p>
+          <form class="needs-validation-custom" novalidate>
+            <div class="input-group">
+              <input type="email" class="form-control newsletter-input" placeholder="Enter your email" required>
+              <button class="btn newsletter-btn" type="submit">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="small mb-0 text-white-50">© 2026 EventPulse Inc. All rights reserved.</p>
+        <div class="d-flex gap-3 small">
+          <a href="privacy.html" class="footer-bottom-link">Privacy Policy</a>
+          <a href="privacy.html" class="footer-bottom-link">Terms of Service</a>
+          <a href="sitemap.xml" class="footer-bottom-link">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

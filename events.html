@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Upcoming Events & Ticket Booking - EventPulse. Find concert tickets, AI summits, business forums, and galas.">
+  <meta name="keywords" content="Event Tickets, AI Summit 2026, Music Festival Passes, Financial Forum Booking, Fashion Gala">
+  <title>EventPulse | Upcoming Events & Ticket Booking</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="bi bi-broadcast"></i> EventPulse
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title font-weight-bold" id="offcanvasNavbarLabel">
+              <i class="bi bi-broadcast text-danger"></i> EventPulse Navigation
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body align-items-center">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+              <a href="login.html" class="btn btn-primary-custom">Log In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO WITH BRIGHT BACKGROUND IMAGE -->
+  <section class="inner-hero-section text-center" style="background-image: url('assets/img/event-hero.jpg');">
+    <div class="inner-hero-overlay"></div>
+    <div class="container inner-hero-content py-4">
+      <span class="section-badge badge-secondary mb-3">Live Lineup</span>
+      <h1 class="display-4 fw-bold text-white mb-3">Discover & Book Upcoming Events</h1>
+      <p class="lead text-white-50 max-w-700 mx-auto">
+        Reserve your verified digital pass for top tech summits, concerts, trade expos, and galas worldwide.
+      </p>
+
+      <!-- Live Search & Filters Container -->
+      <div class="max-w-700 mx-auto mt-4">
+        <div class="input-group input-group-lg bg-white rounded-pill p-1 shadow-lg">
+          <span class="input-group-text bg-transparent border-0 text-muted ps-3">
+            <i class="bi bi-search fs-5"></i>
+          </span>
+          <input type="text" id="eventSearchInput" class="form-control border-0 shadow-none fs-6" placeholder="Search event title, venue, or keyword...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER BUTTONS & EVENTS LIST -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <!-- Filter Buttons -->
+      <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+        <button class="btn btn-primary-custom filter-btn active" data-filter="all">All Events</button>
+        <button class="btn btn-outline-custom filter-btn" data-filter="tech">Tech & AI</button>
+        <button class="btn btn-outline-custom filter-btn" data-filter="music">Music Fest</button>
+        <button class="btn btn-outline-custom filter-btn" data-filter="business">Business</button>
+        <button class="btn btn-outline-custom filter-btn" data-filter="fashion">Fashion & Arts</button>
+      </div>
+
+      <!-- Events Grid -->
+      <div class="row g-4 align-items-stretch" id="eventsGrid">
+        <!-- Event 1 -->
+        <div class="col-lg-4 col-md-6 filter-item" data-category="tech">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/event-1.jpg" alt="AI World Summit">
+              <span class="card-tag bg-primary">Tech & AI</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-danger fw-bold small"><i class="bi bi-calendar-check"></i> NOV 18-20, 2026</span>
+                <span class="badge bg-success">Selling Fast</span>
+              </div>
+              <h5 class="card-title fw-bold mb-2">Global AI & Future Tech Summit</h5>
+              <p class="card-text text-muted small">San Francisco Convention Center | Keynotes by top LLM researchers and robotics pioneers.</p>
+              <div class="pt-3 border-top text-center">
+                <small class="text-muted d-block mb-1">Starting from</small>
+                <span class="fw-bold fs-5 text-indigo mb-3 d-block">$299.00</span>
+                <button class="btn btn-secondary-custom w-100 d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal" data-event-title="Global AI & Future Tech Summit">
+                  <i class="bi bi-ticket-fill me-1"></i> Book Ticket
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="col-lg-4 col-md-6 filter-item" data-category="music">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/event-2.jpg" alt="Neon Horizon">
+              <span class="card-tag bg-danger">Music Fest</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-danger fw-bold small"><i class="bi bi-calendar-check"></i> DEC 05-07, 2026</span>
+                <span class="badge bg-danger">Featured</span>
+              </div>
+              <h5 class="card-title fw-bold mb-2">Neon Horizon Electronic Fest</h5>
+              <p class="card-text text-muted small">Grand Arena, SF | 3 nights of immersive soundscapes, laser lights, and world-class DJs.</p>
+              <div class="pt-3 border-top text-center">
+                <small class="text-muted d-block mb-1">Starting from</small>
+                <span class="fw-bold fs-5 text-indigo mb-3 d-block">$149.00</span>
+                <button class="btn btn-secondary-custom w-100 d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal" data-event-title="Neon Horizon Electronic Fest">
+                  <i class="bi bi-ticket-fill me-1"></i> Book Ticket
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="col-lg-4 col-md-6 filter-item" data-category="business">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/event-3.jpg" alt="Finance Forum">
+              <span class="card-tag bg-primary">Business</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-danger fw-bold small"><i class="bi bi-calendar-check"></i> DEC 15, 2026</span>
+                <span class="badge bg-info text-dark">VIP Pass</span>
+              </div>
+              <h5 class="card-title fw-bold mb-2">Global Financial Leadership Forum</h5>
+              <p class="card-text text-muted small">Metropolitan Hotel, NYC | Wall Street market outlook, venture investment, and banking panels.</p>
+              <div class="pt-3 border-top text-center">
+                <small class="text-muted d-block mb-1">Starting from</small>
+                <span class="fw-bold fs-5 text-indigo mb-3 d-block">$450.00</span>
+                <button class="btn btn-secondary-custom w-100 d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal" data-event-title="Global Financial Leadership Forum">
+                  <i class="bi bi-ticket-fill me-1"></i> Book Ticket
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="col-lg-4 col-md-6 filter-item" data-category="fashion">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/event-4.jpg" alt="Couture Gala">
+              <span class="card-tag bg-secondary">Fashion & Arts</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-danger fw-bold small"><i class="bi bi-calendar-check"></i> JAN 12, 2027</span>
+                <span class="badge bg-primary">Limited Seats</span>
+              </div>
+              <h5 class="card-title fw-bold mb-2">Royal Couture Fashion Runway Gala</h5>
+              <p class="card-text text-muted small">Louvre Palace Hall, Paris | Spring couture collections, red carpet press wall, and champagne dinner.</p>
+              <div class="pt-3 border-top text-center">
+                <small class="text-muted d-block mb-1">Starting from</small>
+                <span class="fw-bold fs-5 text-indigo mb-3 d-block">$599.00</span>
+                <button class="btn btn-secondary-custom w-100 d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal" data-event-title="Royal Couture Fashion Runway Gala">
+                  <i class="bi bi-ticket-fill me-1"></i> Book Ticket
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="col-lg-4 col-md-6 filter-item" data-category="fashion">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/event-5.jpg" alt="Film Awards">
+              <span class="card-tag bg-secondary">Fashion & Arts</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-danger fw-bold small"><i class="bi bi-calendar-check"></i> FEB 04, 2027</span>
+                <span class="badge bg-success">Open</span>
+              </div>
+              <h5 class="card-title fw-bold mb-2">International Film & Media Awards</h5>
+              <p class="card-text text-muted small">Cinema Palace, Los Angeles | Celebrating indie directors, documentary cinematographers, and film tech.</p>
+              <div class="pt-3 border-top text-center">
+                <small class="text-muted d-block mb-1">Starting from</small>
+                <span class="fw-bold fs-5 text-indigo mb-3 d-block">$350.00</span>
+                <button class="btn btn-secondary-custom w-100 d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal" data-event-title="International Film & Media Awards">
+                  <i class="bi bi-ticket-fill me-1"></i> Book Ticket
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 6 -->
+        <div class="col-lg-4 col-md-6 filter-item" data-category="tech">
+          <div class="custom-card">
+            <div class="card-img-wrapper">
+              <img src="assets/img/event-6.jpg" alt="EcoTech Expo">
+              <span class="card-tag bg-primary">Tech & AI</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-danger fw-bold small"><i class="bi bi-calendar-check"></i> MAR 22, 2027</span>
+                <span class="badge bg-warning text-dark">Early Bird</span>
+              </div>
+              <h5 class="card-title fw-bold mb-2">EcoTech & Clean Energy Expo</h5>
+              <p class="card-text text-muted small">Green Expo Center, Berlin | Solar innovations, electric mobility showcases, and climate tech startups.</p>
+              <div class="pt-3 border-top text-center">
+                <small class="text-muted d-block mb-1">Starting from</small>
+                <span class="fw-bold fs-5 text-indigo mb-3 d-block">$199.00</span>
+                <button class="btn btn-secondary-custom w-100 d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal" data-event-title="EcoTech & Clean Energy Expo">
+                  <i class="bi bi-ticket-fill me-1"></i> Book Ticket
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow-lg">
+        <div class="modal-header bg-dark text-white rounded-top-4 border-0">
+          <h5 class="modal-header-title mb-0 fw-bold" id="bookingModalLabel">
+            <i class="bi bi-ticket-perforated-fill text-danger me-2"></i> Book Tickets
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <h6 class="fw-bold text-primary mb-3" id="bookingEventName">Selected Event</h6>
+
+          <form class="needs-validation-custom" novalidate>
+            <div class="mb-3">
+              <label class="form-label fw-bold small">Full Name</label>
+              <input type="text" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold small">Email Address</label>
+              <input type="email" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-7">
+                <label class="form-label fw-bold small">Ticket Tier</label>
+                <select class="form-select" id="ticketTypeSelect">
+                  <option value="149">Standard Pass ($149)</option>
+                  <option value="299" selected>VIP All-Access ($299)</option>
+                  <option value="599">Executive Platinum ($599)</option>
+                </select>
+              </div>
+              <div class="col-5">
+                <label class="form-label fw-bold small">Quantity</label>
+                <input type="number" class="form-control" id="ticketQuantityInput" value="1" min="1" max="10" required>
+              </div>
+            </div>
+
+            <div class="p-3 bg-light rounded-3 d-flex justify-content-between align-items-center mb-4 border">
+              <span class="fw-bold text-muted">Total Payable:</span>
+              <span class="h4 fw-bold text-danger mb-0" id="totalPriceDisplay">$299</span>
+            </div>
+
+            <button type="submit" class="btn btn-secondary-custom w-100 py-2 font-weight-bold">
+              <i class="bi bi-credit-card-fill me-1"></i> Confirm Booking & Pay
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html">
+            <i class="bi bi-broadcast"></i> EventPulse
+          </a>
+          <p class="small text-muted mb-4">
+            EventPulse is the premier end-to-end event management platform, crafting iconic summits, concerts, galas, and corporate celebrations worldwide.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-heading">Company</h6>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Upcoming Events</a></li>
+            <li><a href="gallery.html">Portfolio Gallery</a></li>
+            <li><a href="contact.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-heading">Support</h6>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="dashboard.html">Admin Dashboard</a></li>
+            <li><a href="login.html">Member Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h6 class="footer-heading">Subscribe to Event Digest</h6>
+          <p class="small text-muted mb-3">Get VIP early-bird access to summit tickets and exclusive event management insights.</p>
+          <form class="needs-validation-custom" novalidate>
+            <div class="input-group">
+              <input type="email" class="form-control newsletter-input" placeholder="Enter your email" required>
+              <button class="btn newsletter-btn" type="submit">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="small mb-0 text-white-50">© 2026 EventPulse Inc. All rights reserved.</p>
+        <div class="d-flex gap-3 small">
+          <a href="privacy.html" class="footer-bottom-link">Privacy Policy</a>
+          <a href="privacy.html" class="footer-bottom-link">Terms of Service</a>
+          <a href="sitemap.xml" class="footer-bottom-link">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

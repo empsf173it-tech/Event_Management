@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create an EventPulse Account - Register for free to buy event tickets, access VIP passes, and host summits.">
+  <title>EventPulse | Create Your Free Account</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column justify-content-between">
+
+  <!-- SIGNUP CONTAINER SECTION -->
+  <main class="my-auto py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card rounded-4 border-0 shadow-lg overflow-hidden">
+            <div class="row g-0">
+              <!-- Visual Left Side -->
+              <div class="col-md-6 bg-dark position-relative d-none d-md-flex flex-column justify-content-between p-5 text-white">
+                <img src="assets/img/auth-bg.jpg" alt="Spotlight Auditorium Stage" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-30">
+                <div class="position-relative z-2">
+                  <!-- Clickable Brand Logo Header -->
+                  <a href="index.html" class="brand-logo-custom text-white mb-4">
+                    <i class="bi bi-broadcast"></i> EventPulse
+                  </a>
+
+                  <div>
+                    <span class="badge bg-primary mb-3 px-3 py-2">JOIN EVENTPULSE</span>
+                    <h2 class="display-6 fw-bold text-white mb-3">Unlock Instant VIP Access & Ticket Perks</h2>
+                    <ul class="list-unstyled text-secondary-subtle">
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Early-bird discounts on summits & concerts</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Mobile QR digital wallet ticket storage</li>
+                      <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Direct networking with 5,000+ delegates</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="position-relative z-2 pt-4 border-top border-secondary border-opacity-50">
+                  <small class="text-white-50">Join over 1,250,000 active event attendees globally.</small>
+                </div>
+              </div>
+
+              <!-- Signup Form Right Side -->
+              <div class="col-md-6 p-4 p-md-5 bg-white">
+                <div class="text-center mb-4">
+                  <h3 class="fw-bold mb-1">Create Account</h3>
+                  <p class="text-muted small">Sign up in seconds to start booking events</p>
+                </div>
+
+                <!-- Form -->
+                <form class="needs-validation-custom mb-4" novalidate action="dashboard.html">
+                  <div class="mb-3">
+                    <label class="form-label fw-bold small">Full Name</label>
+                    <input type="text" class="form-control" placeholder="Jordan Lee" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label fw-bold small">Email Address</label>
+                    <input type="email" class="form-control" placeholder="jordan@example.com" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label fw-bold small">Password</label>
+                    <div class="input-group">
+                      <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-lock"></i></span>
+                      <input type="password" class="form-control border-start-0 border-end-0 ps-0" id="signupPassword" placeholder="Minimum 8 characters" required>
+                      <button class="btn btn-outline-secondary border-start-0 bg-light text-muted toggle-password-btn" type="button" data-target-input="signupPassword" aria-label="Toggle password visibility">
+                        <i class="bi bi-eye-slash"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label fw-bold small">Primary Interest / Role</label>
+                    <select class="form-select">
+                      <option value="attendee" selected>Event Attendee / Ticket Buyer</option>
+                      <option value="organizer">Corporate Event Planner / Organizer</option>
+                      <option value="sponsor">Sponsor / Exhibitor</option>
+                    </select>
+                  </div>
+
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                    <label class="form-check-input-label small text-muted" for="agreeTerms">
+                      I agree to the <a href="privacy.html" class="text-primary">Terms of Service</a> and <a href="privacy.html" class="text-primary">Privacy Policy</a>
+                    </label>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary-custom w-100 py-2.5 font-weight-bold justify-content-center">
+                    <i class="bi bi-person-plus-fill"></i> Complete Free Registration
+                  </button>
+                </form>
+
+                <div class="position-relative text-center mb-4">
+                  <hr class="text-muted">
+                  <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted small fw-bold">OR REGISTER WITH</span>
+                </div>
+
+                <!-- Social Signup Buttons Aligned Below Submit Button -->
+                <div class="d-flex gap-2 mb-4">
+                  <button class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-google text-danger"></i> Google
+                  </button>
+                  <button class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-apple text-dark"></i> Apple
+                  </button>
+                  <button class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-linkedin text-primary"></i> LinkedIn
+                  </button>
+                </div>
+
+                <p class="text-center text-muted small mt-4 mb-0">
+                  Already have an account? <a href="login.html" class="fw-bold text-danger ms-1">Log In <i class="bi bi-arrow-right"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
