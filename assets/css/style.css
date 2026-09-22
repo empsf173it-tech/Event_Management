@@ -108,7 +108,7 @@ a {
 
 .btn-outline-custom {
   background: transparent;
-  color: var(--tertiary-color) !important;
+  color: var(--tertiary-color);
   border: 2px solid var(--border-color);
   font-weight: 600;
   padding: 0.7rem 1.6rem;
@@ -121,9 +121,15 @@ a {
 
 .btn-outline-custom:hover {
   border-color: var(--primary-color);
-  color: var(--primary-color) !important;
-  background: rgba(79, 70, 229, 0.05);
+  color: #FFFFFF !important;
+  background: var(--primary-color);
   transform: translateY(-2px);
+}
+
+.btn-outline-custom.border-white:hover {
+  background: #FFFFFF;
+  color: var(--primary-color) !important;
+  border-color: #FFFFFF;
 }
 
 .btn-dark-custom {
@@ -148,13 +154,13 @@ a {
 /* Header & Navbar */
 .navbar-custom {
   background: rgba(15, 23, 42, 0.96);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(79, 70, 229, 0.25);
   padding: 0.9rem 0;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
-  z-index: 1030;
+  left: 0;
+  z-index: 1050;
   transition: var(--transition-fast);
 }
 
@@ -171,6 +177,10 @@ a {
 
 .brand-logo-custom.text-white {
   color: #FFFFFF !important;
+}
+
+.brand-logo-custom.text-dark {
+  color: var(--tertiary-color) !important;
 }
 
 .navbar-brand i, .brand-logo-custom i, .footer-brand i {
@@ -303,9 +313,11 @@ a {
 
 .hero-subtitle {
   font-size: 1.15rem;
-  color: #94A3B8;
+  color: #FFFFFF;
   max-width: 620px;
   margin-bottom: 2rem;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-card-preview {
@@ -360,11 +372,24 @@ a {
   margin-top: auto;
 }
 
+/* Align text link CTAs perfectly to the bottom of cards */
+.custom-card > .p-4 > a:not(.btn):last-child,
+.custom-card > div:not(.card-img-wrapper) > a:not(.btn):last-child {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
 /* Social icon rows inside team cards — force flex-row and center regardless of parent flex-column */
 .custom-card .d-flex.flex-row {
   flex-direction: row !important;
   justify-content: center !important;
   align-items: center !important;
+  margin-top: auto !important;
+}
+
+/* Prevent badges from stretching in flex columns */
+.custom-card .badge {
+  align-self: center;
 }
 
 .custom-card:hover {
@@ -435,11 +460,15 @@ a {
 }
 
 .counter-value {
-  font-size: 2.75rem;
+  font-size: clamp(1.5rem, 4vw, 2.75rem);
   font-weight: 800;
   color: var(--tertiary-color);
   line-height: 1;
   margin-bottom: 0.5rem;
+}
+
+.counter-box.bg-dark .text-muted {
+  color: #CBD5E1 !important;
 }
 
 /* Testimonials */

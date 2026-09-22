@@ -20,36 +20,15 @@
   <main class="my-auto py-5">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col-md-8 col-lg-6 col-xl-5">
           <div class="card rounded-4 border-0 shadow-lg overflow-hidden">
             <div class="row g-0">
-              <!-- Visual Left Side -->
-              <div class="col-md-6 bg-dark position-relative d-none d-md-flex flex-column justify-content-between p-5 text-white">
-                <img src="assets/img/auth-bg.jpg" alt="Spotlight Auditorium Stage" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-30">
-                <div class="position-relative z-2">
-                  <!-- Clickable Brand Logo Header -->
-                  <a href="index.html" class="brand-logo-custom text-white mb-4">
+              <!-- Signup Form -->
+              <div class="col-12 p-4 p-md-5 bg-white">
+                <div class="text-center mb-4">
+                  <a href="index.html" class="brand-logo-custom text-dark mb-4">
                     <i class="bi bi-broadcast"></i> EventPulse
                   </a>
-
-                  <div>
-                    <span class="badge bg-primary mb-3 px-3 py-2">JOIN EVENTPULSE</span>
-                    <h2 class="display-6 fw-bold text-white mb-3">Unlock Instant VIP Access & Ticket Perks</h2>
-                    <ul class="list-unstyled text-secondary-subtle">
-                      <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Early-bird discounts on summits & concerts</li>
-                      <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Mobile QR digital wallet ticket storage</li>
-                      <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Direct networking with 5,000+ delegates</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="position-relative z-2 pt-4 border-top border-secondary border-opacity-50">
-                  <small class="text-white-50">Join over 1,250,000 active event attendees globally.</small>
-                </div>
-              </div>
-
-              <!-- Signup Form Right Side -->
-              <div class="col-md-6 p-4 p-md-5 bg-white">
-                <div class="text-center mb-4">
                   <h3 class="fw-bold mb-1">Create Account</h3>
                   <p class="text-muted small">Sign up in seconds to start booking events</p>
                 </div>
@@ -78,6 +57,17 @@
                   </div>
 
                   <div class="mb-3">
+                    <label class="form-label fw-bold small">Confirm Password</label>
+                    <div class="input-group">
+                      <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-lock"></i></span>
+                      <input type="password" class="form-control border-start-0 border-end-0 ps-0" id="signupConfirmPassword" placeholder="Confirm your password" required>
+                      <button class="btn btn-outline-secondary border-start-0 bg-light text-muted toggle-password-btn" type="button" data-target-input="signupConfirmPassword" aria-label="Toggle password visibility">
+                        <i class="bi bi-eye-slash"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
                     <label class="form-label fw-bold small">Primary Interest / Role</label>
                     <select class="form-select">
                       <option value="attendee" selected>Event Attendee / Ticket Buyer</option>
@@ -100,11 +90,11 @@
 
                 <div class="position-relative text-center mb-4">
                   <hr class="text-muted">
-                  <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted small fw-bold">OR REGISTER WITH</span>
+                  <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted small fw-bold text-nowrap">OR REGISTER WITH</span>
                 </div>
 
                 <!-- Social Signup Buttons Aligned Below Submit Button -->
-                <div class="d-flex gap-2 mb-4">
+                <div class="d-flex flex-column flex-sm-row gap-2 mb-4">
                   <button class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2">
                     <i class="bi bi-google text-danger"></i> Google
                   </button>

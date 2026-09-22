@@ -21,35 +21,15 @@
   <main class="my-auto py-5">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col-md-8 col-lg-6 col-xl-5">
           <div class="card rounded-4 border-0 shadow-lg overflow-hidden">
             <div class="row g-0">
-              <!-- Visual Left Side -->
-              <div class="col-md-6 bg-dark position-relative d-none d-md-flex flex-column justify-content-between p-5 text-white">
-                <img src="assets/img/auth-bg.jpg" alt="Spotlight Auditorium Stage" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-30">
-                <div class="position-relative z-2">
-                  <!-- Clickable Brand Logo Header -->
-                  <a href="index.html" class="brand-logo-custom text-white mb-4">
+              <!-- Login Form -->
+              <div class="col-12 p-4 p-md-5 bg-white">
+                <div class="text-center mb-4">
+                  <a href="index.html" class="brand-logo-custom text-dark mb-4">
                     <i class="bi bi-broadcast"></i> EventPulse
                   </a>
-
-                  <div>
-                    <span class="badge bg-danger mb-3 px-3 py-2">MEMBER ACCESS</span>
-                    <h2 class="display-6 fw-bold text-white mb-3">Welcome Back to EventPulse</h2>
-                    <p class="text-secondary-subtle">
-                      Manage your event tickets, view exclusive VIP delegate schedules, and connect with industry leaders.
-                    </p>
-                  </div>
-                </div>
-                <div class="position-relative z-2 pt-4 border-top border-secondary border-opacity-50">
-                  <p class="small text-white-50 mb-0">"EventPulse made managing our global AI summit tickets seamless!"</p>
-                  <small class="text-danger fw-bold">— Tech Executive Digest</small>
-                </div>
-              </div>
-
-              <!-- Login Form Right Side -->
-              <div class="col-md-6 p-4 p-md-5 bg-white">
-                <div class="text-center mb-4">
                   <h3 class="fw-bold mb-1">Account Login</h3>
                   <p class="text-muted small">Enter your credentials to access your ticket wallet</p>
                 </div>
@@ -73,16 +53,16 @@
                         <i class="bi bi-eye-slash"></i>
                       </button>
                     </div>
-                    <div class="text-end mt-1.5">
-                      <a href="#" class="small text-danger fw-bold">Forgot Password?</a>
-                    </div>
                   </div>
 
-                  <div class="form-check mb-4">
-                    <input class="form-check-input" type="checkbox" id="rememberMe">
-                    <label class="form-check-input-label small text-muted" for="rememberMe">
-                      Keep me logged in for 30 days
-                    </label>
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="form-check mb-0">
+                      <input class="form-check-input" type="checkbox" id="rememberMe">
+                      <label class="form-check-label small text-muted fw-semibold" style="user-select: none;" for="rememberMe">
+                        Remember me
+                      </label>
+                    </div>
+                    <a href="#" class="small text-danger fw-bold text-decoration-none">Forgot Password?</a>
                   </div>
 
                   <!-- 1. Centered Content Login Button -->
@@ -93,11 +73,11 @@
 
                 <div class="position-relative text-center mb-4">
                   <hr class="text-muted">
-                  <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted small fw-bold">OR CONTINUE WITH</span>
+                  <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted small fw-bold text-nowrap">OR CONTINUE WITH</span>
                 </div>
 
                 <!-- 3. Social Media Icons Aligned Below Login Button -->
-                <div class="d-flex gap-2 mb-4">
+                <div class="d-flex flex-column flex-sm-row gap-2 mb-4">
                   <button class="btn btn-outline-custom w-100 py-2 d-flex align-items-center justify-content-center gap-2">
                     <i class="bi bi-google text-danger"></i> Google
                   </button>

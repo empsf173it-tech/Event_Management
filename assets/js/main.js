@@ -226,4 +226,51 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 10. Native Accordion Fallback
+  const accordionBtns = document.querySelectorAll('.accordion-button');
+  accordionBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('data-bs-target');
+      if (!targetId) return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (!targetElement) return;
+
+      const isOpen = targetElement.classList.contains('show');
+      const parentSelector = targetElement.getAttribute('data-bs-parent');
+      
+      if (parentSelector && !isOpen) {
+        const parent = document.querySelector(parentSelector);
+        if (parent) {
+          const openSiblings = parent.querySelectorAll('.accordion-collapse.show');
+          openSiblings.forEach(sibling => {
+            sibling.classList.remove('show');
+            sibling.style.display = 'none';
+            const siblingId = sibling.getAttribute('id');
+            const siblingBtn = document.querySelector(`[data-bs-target="#${siblingId}"]`);
+            if (siblingBtn) {
+              siblingBtn.classList.add('collapsed');
+              siblingBtn.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+      }
+
+      if (isOpen) {
+        targetElement.classList.remove('show');
+        targetElement.style.display = 'none';
+        this.classList.add('collapsed');
+        this.setAttribute('aria-expanded', 'false');
+      } else {
+        targetElement.classList.add('show');
+        targetElement.style.display = 'block';
+        this.classList.remove('collapsed');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
 });
