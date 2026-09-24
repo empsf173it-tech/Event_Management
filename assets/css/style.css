@@ -373,8 +373,8 @@ a {
 }
 
 /* Align text link CTAs perfectly to the bottom of cards */
-.custom-card > .p-4 > a:not(.btn):last-child,
-.custom-card > div:not(.card-img-wrapper) > a:not(.btn):last-child {
+.custom-card > .p-4 > a:not(.btn):not(.social-icon-btn):last-child,
+.custom-card > div:not(.card-img-wrapper) > a:not(.btn):not(.social-icon-btn):last-child {
   margin-top: auto;
   align-self: flex-start;
 }
@@ -593,10 +593,22 @@ a {
   border-radius: 50%;
   background: #1E293B;
   color: #FFFFFF !important;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.social-icon-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.social-icon-btn i::before {
+  vertical-align: 0;
 }
 
 .social-icon-btn:hover {
